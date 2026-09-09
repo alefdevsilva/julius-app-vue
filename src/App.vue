@@ -2,12 +2,19 @@
   <div>
     <MarcaJulius />
     <HeaderJulius />
+
+    <div id="container">
+      <PainelLancamentos />
+      <PainelResumo />
+    </div>
   </div>
 </template>
 
 <script setup>
 import HeaderJulius from './components/HeaderJulius.vue';
 import MarcaJulius from './components/MarcaJulius.vue'
+import PainelLancamentos from './components/PainelLancamentos.vue';
+import PainelResumo from './components/PainelResumo.vue';
 </script>
 
 <style>
@@ -29,4 +36,10 @@ body{
   margin: 0;
   background-color: #dddddd;
 }
+
+#container {
+  display: flex;
+  padding: 20px;
+}
+
 </style>
