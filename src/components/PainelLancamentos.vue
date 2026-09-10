@@ -24,10 +24,39 @@
                 <button>Lançar</button>
             </form>
         </div>
+
+        <div id="areaLancamentos">
+            <BlocoLancamento 
+                tipo="entrada" 
+                :lancamento="{
+                    descricao: 'Venda de HQ',
+                    data: '2026-09-10',
+                    valor: 100,
+            }" />
+
+                <BlocoLancamento 
+                tipo="saida" 
+                :lancamento="{
+                    descricao: 'Venda de HQ',
+                    data: '2026-09-10',
+                    valor: 50,
+            }" />
+
+                <BlocoLancamento 
+                tipo="entrada" 
+                :lancamento="{
+                    descricao: 'Venda de HQ',
+                    data: '2026-09-10',
+                    valor: 100,
+            }" />
+
+        </div>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import BlocoLancamento from './BlocoLancamento.vue'
+
 </script>
 
 <style scoped>
@@ -54,7 +83,7 @@ button {
 
 #valor,
 #descricao,
-#data{
+#data {
     height: 20px;
     font-family: "padrao";
     font-size: 100%;
@@ -65,15 +94,15 @@ button {
     font-family: "negrito";
 }
 
-#tiposLancamentos label{
+#tiposLancamentos label {
     margin-right: 20px;
 }
 
-#tiposLancamentos label:first-of-type{
+#tiposLancamentos label:first-of-type {
     color: #22a7f0;
 }
 
-#tiposLancamentos label:last-of-type{
+#tiposLancamentos label:last-of-type {
     color: #e74c3c;
 }
 
@@ -92,5 +121,8 @@ button {
     font-size: 120%;
 }
 
+#areaLancamentos {
+    margin-top: 30px;
+}
 
 </style>
