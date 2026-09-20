@@ -62,7 +62,7 @@ import BlocoLancamento from './BlocoLancamento.vue'
 <style scoped>
 #painelLancamento {
     width: 40%;
-    padding: 20px;
+    padding: 10px;
 }
 
 #formularioLancamento {
